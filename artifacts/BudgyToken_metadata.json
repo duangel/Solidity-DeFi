@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.17+commit.8df45f5f"
+		"version": "0.8.19+commit.7dd6d404"
 	},
 	"language": "Solidity",
 	"output": {
@@ -59,6 +59,30 @@
 				],
 				"name": "Transfer",
 				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "friend",
+						"type": "address"
+					}
+				],
+				"name": "VIPOnly",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -122,6 +146,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "array_length",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -138,6 +175,30 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_userAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_userId",
+						"type": "uint256"
+					}
+				],
+				"name": "createUser",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -215,6 +276,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "number",
+						"type": "uint256"
+					}
+				],
+				"name": "randomGenerator",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "symbol",
 				"outputs": [
@@ -222,6 +302,19 @@
 						"internalType": "string",
 						"name": "",
 						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -294,33 +387,45 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
+				"inputs": [],
+				"name": "unitsOneEthCanBuy",
+				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "welcomeToTheClub",
-				"outputs": [
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
 					{
-						"internalType": "string",
+						"internalType": "address",
 						"name": "",
-						"type": "string"
+						"type": "address"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"name": "users",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "set",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -340,9 +445,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"budgyToken.sol": "BudgyToken"
+			"budgyToken_v2.sol": "BudgyToken"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -354,12 +459,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"budgyToken.sol": {
-			"keccak256": "0xf12779f05b6772c3b3461b79b1a8e84aa614cec2b2d67d6827fb8282b35e20bb",
+		"budgyToken_v2.sol": {
+			"keccak256": "0x980b50b50941fa01808270957c59c39093a4302a697624b8d63e3c89666d9f53",
 			"license": "XXX",
 			"urls": [
-				"bzz-raw://d1780e7a0235210c34d6863c71b0109f048db71ad27bb1d4898de8389299f8f2",
-				"dweb:/ipfs/QmRLqRygAE77VMGyPDky2u4mbRqRZtWjdxWpKwCTioDweF"
+				"bzz-raw://adaa3316cd6ae1ee9e1b1f5233dd9481111cbea05ad25b3072605b8009975074",
+				"dweb:/ipfs/QmRTp2PGdQGLguk5aeDSic86ZyPBiHPUxZTT2KiDeCBFKs"
 			]
 		},
 		"interfaces/IERC20.sol": {
