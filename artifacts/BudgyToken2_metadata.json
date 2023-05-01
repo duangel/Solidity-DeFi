@@ -61,6 +61,30 @@
 				"type": "event"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "referee",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "referred",
+						"type": "address"
+					}
+				],
+				"name": "VIPClub",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "_totalSupply",
 				"outputs": [
@@ -245,6 +269,24 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "name",
 				"outputs": [
@@ -291,19 +333,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "tokenOwner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "totalSupply",
 				"outputs": [
 					{
@@ -312,7 +341,7 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -446,7 +475,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"budgyToken_v2.sol": "BudgyToken"
+			"budgyToken_v2.sol": "BudgyToken2"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -461,11 +490,11 @@
 	},
 	"sources": {
 		"budgyToken_v2.sol": {
-			"keccak256": "0x509dc2f64e47198e17a9b53179861edbf60c401b959773cfa0abb8ca704c94ee",
+			"keccak256": "0x322bef73e2284209f53bbd337c5498a7565d8c7361a9fb336ea00e8aa7aa0472",
 			"license": "XXX",
 			"urls": [
-				"bzz-raw://ba23105080262b82d692bff4d7e492f1195cfbb459b7c00e80b2d1de979ae91f",
-				"dweb:/ipfs/QmfWqzrz7qn29M6BwU3hzGmscSA7wzEKBz6cg9SqgNDKzA"
+				"bzz-raw://2a5c2d05481df30e0e650f787f5fed7f08ff38e9fa57eb4f3820aff44842bd8f",
+				"dweb:/ipfs/QmTkQPmvZqbfFi11GiPRePA6ERpTiiwHAqFhgb7MaQxwi8"
 			]
 		},
 		"interfaces/IERC20.sol": {
